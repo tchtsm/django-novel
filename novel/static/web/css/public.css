@@ -1,0 +1,98 @@
+body,ul,li{
+	margin: 0;
+	padding: 0;
+}
+a{
+	color: black;
+}
+a:hover{
+	color: black;
+	text-decoration: none;
+}
+ul,li{list-style-type: none;}
+/*首页*/
+.grade-item{
+	margin-top:20px;
+}
+.grade-item h5{
+	font-weight:bold;padding-bottom:5px;border-bottom:1px solid #ccc
+}
+.grade-item h5 span{
+	font-weight:normal;font-size:14px;margin-left:15px;
+}
+.grade-ul li{
+	padding: 5px 10px 0 10px;
+}
+.grade-ul h6{
+	margin: 10px 10px 0 10px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #ccc;
+	position: relative;
+}
+.grade-ul h6::after{
+	content: "";
+	width: 30%;
+	height: 2px;
+	background: red;
+	position: absolute;
+	left: 0;
+	bottom: -1px;
+}
+.grade-ul a{
+	font-size: 14px;
+}
+table.table-item tr{
+	height: 140px;
+}
+table.table-item .img{
+	width: 95px;
+	height: 125px;
+	float: left;
+}
+table.table-item img{
+	width: 100%;
+	height: 100%;
+}
+table.table-item .item{
+	width: 267px;
+	height: 125px;
+	float: right;
+	margin-left: 4px;
+	position: relative;
+}
+table.table-item .item p{
+	font-size: 12px;
+	height: 62px;
+	line-height: 1.6;
+	overflow:hidden;
+	position: relative;
+}
+table.table-item .item p::after{
+	content: "...";
+	position: absolute;
+	bottom:-10px;
+	left:0;
+	font-size: 25px;
+}
+table.table-item .item div{
+	position: relative;
+	bottom: 4px;
+}
+table.table-item .item div a{
+	padding: 2px 4px;
+	font-size: 13px;
+}
+table.table-item .item div a:nth-child(1){
+	border-left: 3px solid #999;
+}
+table.table-item .item div a:nth-child(3){
+	float: right;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+table.table-item .item div a:nth-child(2){
+	background: #666;
+	float: right;
+	color: white;
+	margin-left: 5px;
+}

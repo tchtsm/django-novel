@@ -1,0 +1,11 @@
+{% extends 'web/layout.html' %}
+{% block title %}{{ content.name }}{% endblock %}
+{% block content %}
+<div>
+{{ content.name }}
+{{ content.user }}
+{{ content.type }}
+{{ content.intro }}
+</div>
+<div>查看目录</div>
+{% endblock %}

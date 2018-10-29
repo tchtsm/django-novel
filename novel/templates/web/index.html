@@ -1,0 +1,110 @@
+{% extends 'web/layout.html' %}
+{% block content %}
+<div class="grade" style="overflow:hidden">
+	<div style="width:20%;float:left">
+		<table class="table table-striped">
+			<style>table a{color:black}</style>
+			<tr>
+				<td><a href="#">玄幻</a></td>
+				<td><a href="#">奇幻</a></td>
+			</tr>
+			<tr>
+				<td><a href="#">武侠</a></td>
+				<td><a href="#">仙侠</a></td>
+			</tr>
+			<tr>
+				<td><a href="#">都市</a></td>
+				<td><a href="#">现实</a></td>
+			</tr>
+			<tr>
+				<td><a href="#">军事</a></td>
+				<td><a href="#">历史</a></td>
+			</tr>
+			<tr>
+				<td><a href="#">科幻</a></td>
+				<td><a href="#">灵异</a></td>
+			</tr>
+			<tr>
+				<td><a href="#">言情</a></td>
+				<td><a href="#">次元</a></td>
+			</tr>
+			</table>
+	</div>
+	<div style="width:56%;float:left">
+		<div id="demo" class="carousel slide" data-ride="carousel">
+		<!-- 指示符 -->
+			<ul class="carousel-indicators">
+			<li data-target="#demo" data-slide-to="0" class="active"></li>
+			<li data-target="#demo" data-slide-to="1"></li>
+			<li data-target="#demo" data-slide-to="2"></li>
+			<li data-target="#demo" data-slide-to="3"></li>
+			</ul>
+		<!-- 轮播图片 -->
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img width="100%" src="static/web/image/index1.jpg">
+				</div>
+				<div class="carousel-item">
+					<img width="100%" src="static/web/image/index2.jpg">
+				</div>
+				<div class="carousel-item">
+					<img width="100%" src="static/web/image/index3.jpg">
+				</div>
+				<div class="carousel-item">
+					<img width="100%" src="static/web/image/index4.jpg">
+				</div>
+			</div>
+		</div>
+		<div style="margin-top:5px">
+			<img width="33%" height="102px" src="static/web/image/广告1.jpg" alt="广告位">
+			<img style="width:calc(32% + 3px)" height="107px" src="static/web/image/广告2.jpg" alt="广告位">
+			<img width="33%" height="107px" src="static/web/image/广告3.jpg" alt="广告位">
+		</div>
+	</div>
+	<div style="width:23%;float:left">
+		<ul class="grade-ul">
+			<h6>力推书籍</h6>
+			<li><a href="">[言情]</a><a href=""> 阴阳师大人</a></li>
+			<li><a href="">[言情]</a><a href=""> 简牍特种军魂：王牌娇妻斗战</a></li>
+			<li><a href="">[言情]</a><a href=""> 盛世娇宠之名门闺香</a></li>
+			<li><a href="">[言情]</a><a href=""> 盛世娇宠之名门闺香</a></li>
+			<li><a href="">[言情]</a><a href=""> 盛世娇宠之名门闺香</a></li>
+			<li><a href="">[言情]</a><a href=""> 盛世娇宠之名门闺香</a></li>
+			<li><a href="">[言情]</a><a href=""> 盛世娇宠之名门闺香</a></li>
+			<li><a href="">[言情]</a><a href=""> 盛世娇宠之名门闺香</a></li>
+			<li><a href="">[言情]</a><a href=""> 盛世娇宠之名门闺香</a></li>
+		</ul>
+	</div>
+</div>
+<div class="grade-item">
+	<h5>完本精品<span>已有{{overcount}}本<a href=""> 更多</a></span></h5>
+	<table class="table-item">
+		<colgroup>
+			<col width="33%"></col>
+			<col width="33%"></col>
+			<col width="33%"></col>
+		</colgroup>
+		<tr>
+		{% for v in over %}
+			<td>
+				<div class="img">
+					<img width="120px" src="static/web/image/180.jpg">
+				</div>
+				<div class="item">
+					<h6><a href="book/{{v.code}}.html">{{ v.name }}</a></h6>
+					<p>{{ v.intro }}</p>
+					<div>
+						<a href="">{{ v.user }}</a>
+						<a href="javascript:void();">评分 {{ v.score }}</a>
+						<a href="">{{ v.type }}</a>
+					</div>
+				</div>
+			</td>
+			{% if forloop.counter|divisibleby:3 %}
+			</tr><tr>
+			{% endif %}
+		{% endfor %}
+		</tr>
+	</table>
+</div>
+{% endblock %}
